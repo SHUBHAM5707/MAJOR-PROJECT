@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:iconsax/iconsax.dart';
 
@@ -7,6 +8,7 @@ import 'package:shop_kart/common/widgets/custom_shape/containers/rounded_contain
 import 'package:shop_kart/common/widgets/images/rounded_images.dart';
 import 'package:shop_kart/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:shop_kart/common/widgets/texts/product_title_text.dart';
+import 'package:shop_kart/features/shop/screens/product_details/product_details.dart';
 import 'package:shop_kart/utils/constants/colors.dart';
 import 'package:shop_kart/utils/constants/image_string.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
@@ -22,7 +24,7 @@ class SkProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = SKHelperFunction.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(()=> const ProductDetail()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
