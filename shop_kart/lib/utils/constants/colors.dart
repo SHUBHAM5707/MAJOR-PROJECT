@@ -26,6 +26,7 @@ class SkColors{
   static const Color textPrimary = Color(0xFF333333);
   static const Color textSecondary = Color(0xFF6c7570);
   static const Color textAccent = Colors.white;
+  static const Color textWhite = Colors.white;
 
   //Background colors
   static const Color light = Color(0xFFF6F6F6);
