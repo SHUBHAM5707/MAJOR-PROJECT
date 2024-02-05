@@ -42,7 +42,7 @@ class SkImages{
   static const String promoBanner3 = "assets/banners/Black Yellow Bold Bag Fashion Sale Banner.png";
 
   static const String productImage1 = "assets/Images/Product/shoe1.jpg";
-  static const String productImage2 = "assets/Images/Product/shoe1.jpg";
-  static const String productImage3 = "assets/Images/Product/shoe1.jpg";
+  static const String productImage2 = "assets/Images/Product/shoe2.jpg";
+  static const String productImage3 = "assets/Images/Product/shoe3.jpg";
 
 }
