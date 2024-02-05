@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:shop_kart/common/widgets/appbar/appbar.dart';
+import 'package:shop_kart/common/widgets/appbar/tabbar.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/rounded_container.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/search_container.dart';
 import 'package:shop_kart/common/widgets/layouts/grid_layout.dart';
@@ -127,19 +128,15 @@ class StoreScreen extends StatelessWidget {
                     ),
       
                     ///Tabs
-                    bottom: TabBar(
-                      isScrollable: true,
-                      indicatorColor: SkColors.primary,
-                      unselectedLabelColor: SkColors.dark,
-                      labelColor: SKHelperFunction.isDarkMode(context) ? SkColors.white : SkColors.primary,
-      
-                      tabs: const [
-      
+                    bottom:const SkTabBar(
+                      tabs: [
                         Tab(child: Text('Sports')),
                         Tab(child: Text('Fashion')),
                         Tab(child: Text('LifeStyle')),
                         Tab(child: Text('Beauty')),
-                    ]),
+                      ],
+
+                    )
                   ),
                 ];
               },
