@@ -11,7 +11,7 @@ Future<void> main() async {
 
 
 
-  //Todo:Initialize Firebase
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
 
