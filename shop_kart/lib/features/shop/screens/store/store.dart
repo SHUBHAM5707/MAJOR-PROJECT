@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:shop_kart/common/widgets/appbar/appbar.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/rounded_container.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/search_container.dart';
@@ -7,7 +7,7 @@ import 'package:shop_kart/common/widgets/layouts/grid_layout.dart';
 import 'package:shop_kart/common/widgets/product.cart/cart_menu_icart.dart';
 import 'package:shop_kart/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:shop_kart/common/widgets/texts/section_heading.dart';
-import 'package:shop_kart/features/shop/screens/home/widgets/home_appbar.dart';
+
 import 'package:shop_kart/utils/constants/colors.dart';
 import 'package:shop_kart/utils/constants/enums.dart';
 import 'package:shop_kart/utils/constants/image_string.dart';
@@ -133,7 +133,7 @@ class StoreScreen extends StatelessWidget {
                       unselectedLabelColor: SkColors.dark,
                       labelColor: SKHelperFunction.isDarkMode(context) ? SkColors.white : SkColors.primary,
       
-                      tabs: [
+                      tabs: const [
       
                         Tab(child: Text('Sports')),
                         Tab(child: Text('Fashion')),
