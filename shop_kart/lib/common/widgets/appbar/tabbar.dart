@@ -28,6 +28,6 @@ class SkTabBar extends StatelessWidget implements PreferredSizeWidget{
   }
 
   @override
-  // TODO: implement preferredSize
+  ///implement preferredSize
   Size get preferredSize => Size.fromHeight(SkDeviceUtils.getAppBarHeight());
 }
