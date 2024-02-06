@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/sizes.dart';
-import '../poduct_cards/product_card_vertical.dart';
 
 class SkGridLayout extends StatelessWidget {
   const SkGridLayout({

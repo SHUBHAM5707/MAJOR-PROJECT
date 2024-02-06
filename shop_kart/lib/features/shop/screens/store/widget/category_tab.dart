@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:shop_kart/common/widgets/layouts/grid_layout.dart';
-import 'package:shop_kart/common/widgets/poduct_cards/product_card_vertical.dart';
 import 'package:shop_kart/common/widgets/texts/section_heading.dart';
 
 import '../../../../../common/widgets/brand/brand_show_case.dart';
+import '../../../../../common/widgets/product_cards/product_card_vertical.dart';
 import '../../../../../utils/constants/image_string.dart';
 import '../../../../../utils/constants/sizes.dart';
 

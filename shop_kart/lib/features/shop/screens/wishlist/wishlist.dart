@@ -4,9 +4,11 @@ import 'package:iconsax/iconsax.dart';
 import 'package:shop_kart/common/widgets/appbar/appbar.dart';
 import 'package:shop_kart/common/widgets/icons/sk_circular_icon.dart';
 import 'package:shop_kart/common/widgets/layouts/grid_layout.dart';
-import 'package:shop_kart/common/widgets/poduct_cards/product_card_vertical.dart';
 import 'package:shop_kart/features/shop/screens/home/home.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
+
+import '../../../../common/widgets/product_cards/product_card_vertical.dart';
+
 
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});

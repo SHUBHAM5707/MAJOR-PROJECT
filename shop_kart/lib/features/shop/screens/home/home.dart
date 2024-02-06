@@ -7,7 +7,7 @@ import 'package:shop_kart/utils/constants/sizes.dart';
 import '../../../../common/widgets/custom_shape/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shape/containers/search_container.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
-import '../../../../common/widgets/poduct_cards/product_card_vertical.dart';
+import '../../../../common/widgets/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 
 
