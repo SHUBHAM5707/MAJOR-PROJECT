@@ -9,7 +9,7 @@ class SkVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = SkColors.white,
-    this.backgroundColor =SkColors.white,
+    this.backgroundColor,
     this.onTap,
   });
 
