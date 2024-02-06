@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop_kart/common/widgets/icons/sk_circular_icon.dart';
 import 'package:shop_kart/common/widgets/images/circular_image.dart';
 import 'package:shop_kart/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:shop_kart/common/widgets/texts/product_price_text.dart';
