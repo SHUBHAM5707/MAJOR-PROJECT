@@ -45,4 +45,6 @@ class SkImages{
   static const String productImage2 = "assets/Images/Product/shoe2.jpg";
   static const String productImage3 = "assets/Images/Product/shoe3.jpg";
 
+  static const String user = "assets/Icons/user/man.png";
+
 }

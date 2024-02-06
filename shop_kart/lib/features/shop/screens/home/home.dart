@@ -51,6 +51,8 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(height: SkSizes.spaceBtwSections),
+
                 ],
               ),
             ),
@@ -72,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                     SkGridLayout(itemCount: 2,itemBuilder: (_,index) => const SkProductCardVertical())
                   ],
                 )
-            )
+              ),
           ],
         ),
       ),

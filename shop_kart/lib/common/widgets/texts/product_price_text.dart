@@ -1,11 +1,10 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 
 class SkProductPriceText extends StatelessWidget {
   const SkProductPriceText({
     super.key,
-    this.currencySign = '\₹',
+    this.currencySign = '₹',
     required this.price,
     this.maxLine = 1,
     this.isLarge = false,
