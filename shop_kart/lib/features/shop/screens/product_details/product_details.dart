@@ -6,14 +6,12 @@ import 'package:shop_kart/features/shop/screens/product_details/widget/product_m
 import 'package:shop_kart/features/shop/screens/product_details/widget/rating_share_widget.dart';
 
 import 'package:shop_kart/utils/constants/sizes.dart';
-import 'package:shop_kart/utils/helpers/helper_function.dart';
 
 
 class ProductDetail extends StatelessWidget {
   const ProductDetail({super.key});
   @override
   Widget build(BuildContext context) {
-    final dark = SKHelperFunction.isDarkMode(context);
     return  const Scaffold(
       body: SingleChildScrollView(
         child: Column(

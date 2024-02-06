@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:shop_kart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:shop_kart/utils/helpers/helper_function.dart';
 
 import '../../../../../common/widgets/appbar/appbar.dart';
