@@ -41,10 +41,18 @@ class SkImages{
   static const String promoBanner2 = "assets/banners/White Blue Simple Special Offer Sale Banner Landscape.png";
   static const String promoBanner3 = "assets/banners/Black Yellow Bold Bag Fashion Sale Banner.png";
 
+  //---product
   static const String productImage1 = "assets/Images/Product/shoe1.jpg";
   static const String productImage2 = "assets/Images/Product/shoe2.jpg";
   static const String productImage3 = "assets/Images/Product/shoe3.jpg";
 
+  //---product review
+  static const String userProfileImage1 ="assets/Images/review/boy.png";
+  static const String userProfileImage2 ="assets/Images/review/girl.png";
+  static const String userProfileImage3 ="assets/Images/review/man.png";
+
+
+  //profile
   static const String user = "assets/Icons/user/man.png";
 
 }

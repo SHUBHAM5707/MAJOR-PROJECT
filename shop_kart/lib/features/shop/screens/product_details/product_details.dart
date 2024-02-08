@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:readmore/readmore.dart';
 import 'package:shop_kart/common/widgets/texts/section_heading.dart';
 import 'package:shop_kart/features/shop/screens/product_details/widget/bottom_add_to_cart.dart';
 import 'package:shop_kart/features/shop/screens/product_details/widget/product_attributes.dart';
-
+import 'package:readmore/readmore.dart';
 import 'package:shop_kart/features/shop/screens/product_details/widget/product_deatil_image_slider.dart';
 import 'package:shop_kart/features/shop/screens/product_details/widget/product_meta_data.dart';
 import 'package:shop_kart/features/shop/screens/product_details/widget/rating_share_widget.dart';
+import 'package:shop_kart/features/shop/screens/product_reviews/product_review.dart';
 
 import 'package:shop_kart/utils/constants/sizes.dart';
 
@@ -17,32 +18,32 @@ class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      bottomNavigationBar: SKBottomAddToCart(),
+      bottomNavigationBar: const SKBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
             ///product image slider
-            SkProductImageSlider(),
+            const SkProductImageSlider(),
 
 
             ///product  Detail
             Padding(
-                padding: EdgeInsets.only(right: SkSizes.defaultSpace, left: SkSizes.defaultSpace,bottom: SkSizes.defaultSpace),
+                padding: const EdgeInsets.only(right: SkSizes.defaultSpace, left: SkSizes.defaultSpace,bottom: SkSizes.defaultSpace),
                 child: Column(
                   children: [
                     ///rating And Share
-                    SkRatingAndShare(),
+                    const SkRatingAndShare(),
 
 
                     ///price title,stock & Brand
-                    SkProductMetaData(),
+                    const SkProductMetaData(),
 
                     ///attribute
-                    SkProductAttributes(),
+                    const SkProductAttributes(),
                     const SizedBox(height: SkSizes.spaceBtwSections),
 
                     ///Checkout button
-                    SizedBox(width: double.infinity,child: ElevatedButton(onPressed: () {}, child: Text('Checkout'))),
+                    SizedBox(width: double.infinity,child: ElevatedButton(onPressed: () {}, child: const Text('Checkout'))),
 
                     ///description
                     const SkSectionHeading(title: 'Description'),
@@ -67,7 +68,7 @@ class ProductDetail extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const SkSectionHeading(title: 'Reviews(90)',showActionButton: false),
-                        IconButton(icon: const Icon(Iconsax.arrow_right_3,size: 18),onPressed: () {},)
+                        IconButton(icon: const Icon(Iconsax.arrow_right_3,size: 18),onPressed: () => Get.to(() => const ProductReviewScreen())),
                       ],
                     ),
 
