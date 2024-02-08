@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shop_kart/common/widgets/appbar/appbar.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/primary_header_container.dart';
@@ -8,6 +9,7 @@ import 'package:shop_kart/utils/constants/colors.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
+import '../address/address.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -49,7 +51,12 @@ class SettingsScreen extends StatelessWidget {
                     height: SkSizes.spaceBtwIteam,
                   ),
 
-                  const SkSettingMenuTile(icon: Iconsax.safe_home, title: 'My Addresses', subTitle: 'Delivery Address'),
+                  SkSettingMenuTile(
+                      icon: Iconsax.safe_home,
+                      title: 'My Addresses',
+                      subTitle: 'Delivery Address',
+                      onTap: () => Get.to(() => const UserAddressScreen())
+                  ),
                   const SkSettingMenuTile(icon: Iconsax.shopping_cart, title: 'My Kart', subTitle: 'Delivery Address'),
                   const SkSettingMenuTile(icon: Iconsax.bag_tick, title: 'My Order', subTitle: 'Delivery Address'),
                   const SkSettingMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Delivery Address',),
