@@ -3,7 +3,6 @@ import 'package:shop_kart/common/widgets/custom_shape/containers/rounded_contain
 import 'package:shop_kart/common/widgets/texts/product_price_text.dart';
 import 'package:shop_kart/common/widgets/texts/product_title_text.dart';
 import 'package:shop_kart/common/widgets/texts/section_heading.dart';
-import 'package:shop_kart/features/shop/screens/product_details/widget/product_deatil_image_slider.dart';
 import 'package:shop_kart/utils/constants/colors.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
 import 'package:shop_kart/utils/helpers/helper_function.dart';
