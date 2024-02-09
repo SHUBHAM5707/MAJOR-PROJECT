@@ -3,13 +3,13 @@ import 'package:shop_kart/common/widgets/appbar/appbar.dart';
 import 'package:shop_kart/common/widgets/appbar/tabbar.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/search_container.dart';
 import 'package:shop_kart/common/widgets/layouts/grid_layout.dart';
-import 'package:shop_kart/common/widgets/product.cart/cart_menu_icart.dart';
 import 'package:shop_kart/common/widgets/texts/section_heading.dart';
 import 'package:shop_kart/features/shop/screens/store/widget/category_tab.dart';
 import 'package:shop_kart/utils/constants/colors.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
 import 'package:shop_kart/utils/helpers/helper_function.dart';
 import '../../../../common/widgets/brand/brand_card.dart';
+import '../../../../common/widgets/product/cart/cart_menu_icart.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
