@@ -5,6 +5,7 @@ import 'package:shop_kart/common/widgets/appbar/appbar.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/primary_header_container.dart';
 import 'package:shop_kart/common/widgets/list_tiles/setting_menu_tile.dart';
 import 'package:shop_kart/common/widgets/texts/section_heading.dart';
+import 'package:shop_kart/features/shop/screens/order/order.dart';
 import 'package:shop_kart/utils/constants/colors.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
 
@@ -46,7 +47,8 @@ class SettingsScreen extends StatelessWidget {
               child: Column(
                 children: [
                   ///ACCOUNT SETTING
-                  const SkSectionHeading(title: 'Account Setting',showActionButton: false),
+                  const SkSectionHeading(
+                      title: 'Account Setting', showActionButton: false),
                   const SizedBox(
                     height: SkSizes.spaceBtwIteam,
                   ),
@@ -55,25 +57,48 @@ class SettingsScreen extends StatelessWidget {
                       icon: Iconsax.safe_home,
                       title: 'My Addresses',
                       subTitle: 'Delivery Address',
-                      onTap: () => Get.to(() => const UserAddressScreen())
+                      onTap: () => Get.to(() => const UserAddressScreen())),
+                  const SkSettingMenuTile(
+                      icon: Iconsax.shopping_cart,
+                      title: 'My Kart',
+                      subTitle: 'Delivery Address'),
+                  SkSettingMenuTile(
+                      icon: Iconsax.bag_tick,
+                      title: 'My Order',
+                      subTitle: 'Delivery Address',
+                      onTap: () => Get.to(() => const OrderScreen())),
+                  const SkSettingMenuTile(
+                    icon: Iconsax.bank,
+                    title: 'Bank Account',
+                    subTitle: 'Delivery Address',
                   ),
-                  const SkSettingMenuTile(icon: Iconsax.shopping_cart, title: 'My Kart', subTitle: 'Delivery Address'),
-                  const SkSettingMenuTile(icon: Iconsax.bag_tick, title: 'My Order', subTitle: 'Delivery Address'),
-                  const SkSettingMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Delivery Address',),
-                  const SkSettingMenuTile(icon: Iconsax.discount_shape, title: 'Coupons', subTitle: 'Delivery Address'),
-                  const SkSettingMenuTile(icon: Iconsax.notification, title: 'Notifications', subTitle: 'Delivery Address'),
-                  const SkSettingMenuTile(icon: Iconsax.security_card, title: 'Account Privacy', subTitle: 'Delivery Address'),
+                  const SkSettingMenuTile(
+                      icon: Iconsax.discount_shape,
+                      title: 'Coupons',
+                      subTitle: 'Delivery Address'),
+                  const SkSettingMenuTile(
+                      icon: Iconsax.notification,
+                      title: 'Notifications',
+                      subTitle: 'Delivery Address'),
+                  const SkSettingMenuTile(
+                      icon: Iconsax.security_card,
+                      title: 'Account Privacy',
+                      subTitle: 'Delivery Address'),
 
                   ///app setting
                   const SizedBox(height: SkSizes.spaceBtwSections),
-                  const SkSectionHeading(title: 'App Setting',showActionButton: false),
+                  const SkSectionHeading(
+                      title: 'App Setting', showActionButton: false),
                   const SizedBox(height: SkSizes.spaceBtwIteam),
-                  const SkSettingMenuTile(icon: Iconsax.document_upload, title: 'Load Data', subTitle: 'Upload Data to cloud firebase'),
+                  const SkSettingMenuTile(
+                      icon: Iconsax.document_upload,
+                      title: 'Load Data',
+                      subTitle: 'Upload Data to cloud firebase'),
                   SkSettingMenuTile(
-                      icon: Iconsax.location,
-                      title: 'Geolocation',
-                      subTitle: 'set recommended location',
-                      trailing: Switch(value: true, onChanged: (value) {}),
+                    icon: Iconsax.location,
+                    title: 'Geolocation',
+                    subTitle: 'set recommended location',
+                    trailing: Switch(value: true, onChanged: (value) {}),
                   ),
                   SkSettingMenuTile(
                     icon: Iconsax.security_user,
