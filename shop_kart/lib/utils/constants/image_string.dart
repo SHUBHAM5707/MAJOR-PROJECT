@@ -51,6 +51,15 @@ class SkImages{
   static const String userProfileImage2 ="assets/Images/review/girl.png";
   static const String userProfileImage3 ="assets/Images/review/man.png";
 
+  ///payment method
+  static const String googlePay = "assets/Icons/payment/google-pay.png";
+  static const String phonePe = "assets/Icons/payment/Daco_4117619.png";
+  static const String payTm = "assets/Icons/payment/paytm.png";
+  static const String creditCard = "assets/Icons/payment/credit.png";
+  static const String debitCard = "assets/Icons/payment/debit-card.png";
+  static const String payPal = "assets/Icons/payment/paypal.png";
+  static const String successfullPaymentIcon  = "assets/Icons/payment/smart-payment.png";
+
 
   //profile
   static const String user = "assets/Icons/user/man.png";
