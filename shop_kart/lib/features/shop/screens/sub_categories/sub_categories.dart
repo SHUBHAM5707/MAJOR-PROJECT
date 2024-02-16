@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shop_kart/common/widgets/appbar/appbar.dart';
 import 'package:shop_kart/common/widgets/images/rounded_images.dart';
 import 'package:shop_kart/common/widgets/product_cards/product_card_horizontal.dart';
-import 'package:shop_kart/common/widgets/texts/product_price_text.dart';
 import 'package:shop_kart/common/widgets/texts/section_heading.dart';
 import 'package:shop_kart/utils/constants/image_string.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';

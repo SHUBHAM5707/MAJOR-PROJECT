@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/rounded_container.dart';
 import 'package:shop_kart/common/widgets/images/rounded_images.dart';
-import 'package:shop_kart/common/widgets/texts/brand_title_text.dart';
 import 'package:shop_kart/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:shop_kart/common/widgets/texts/product_price_text.dart';
 import 'package:shop_kart/common/widgets/texts/product_title_text.dart';
@@ -11,7 +10,6 @@ import 'package:shop_kart/utils/constants/image_string.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/helpers/helper_function.dart';
-import '../../style/shadows.dart';
 import '../icons/sk_circular_icon.dart';
 
 class SkProductCardHorizontal extends StatelessWidget {
