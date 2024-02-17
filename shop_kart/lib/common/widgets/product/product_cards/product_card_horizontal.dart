@@ -7,10 +7,12 @@ import 'package:shop_kart/common/widgets/texts/product_price_text.dart';
 import 'package:shop_kart/common/widgets/texts/product_title_text.dart';
 import 'package:shop_kart/utils/constants/image_string.dart';
 
-import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/sizes.dart';
-import '../../../utils/helpers/helper_function.dart';
-import '../icons/sk_circular_icon.dart';
+import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/sizes.dart';
+import '../../../../utils/helpers/helper_function.dart';
+import '../../icons/sk_circular_icon.dart';
+
+
 
 class SkProductCardHorizontal extends StatelessWidget {
   const SkProductCardHorizontal({super.key});

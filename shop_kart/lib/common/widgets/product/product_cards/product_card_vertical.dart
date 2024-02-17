@@ -14,8 +14,9 @@ import 'package:shop_kart/utils/constants/image_string.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
 import 'package:shop_kart/utils/helpers/helper_function.dart';
 
-import '../icons/sk_circular_icon.dart';
-import '../texts/product_price_text.dart';
+import '../../icons/sk_circular_icon.dart';
+import '../../texts/product_price_text.dart';
+
 
 class SkProductCardVertical extends StatelessWidget {
   const SkProductCardVertical({super.key});

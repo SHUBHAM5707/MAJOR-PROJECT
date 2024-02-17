@@ -20,7 +20,7 @@ class SkBrandCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: SkRoundedContainer(
         showBorder: showBorder,
         backgroundColor: Colors.transparent,

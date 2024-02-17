@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shop_kart/common/widgets/appbar/appbar.dart';
 import 'package:shop_kart/common/widgets/appbar/tabbar.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/search_container.dart';
 import 'package:shop_kart/common/widgets/layouts/grid_layout.dart';
 import 'package:shop_kart/common/widgets/texts/section_heading.dart';
+import 'package:shop_kart/features/shop/screens/brand/all_brand.dart';
 import 'package:shop_kart/features/shop/screens/store/widget/category_tab.dart';
 import 'package:shop_kart/utils/constants/colors.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
@@ -59,7 +61,7 @@ class StoreScreen extends StatelessWidget {
       
                           ///Feature Brands
                           SkSectionHeading(
-                              title: 'Features Brand', onPressed: () {}),
+                              title: 'Features Brand', onPressed: () => Get.to(() => const AllBrandScreen())),
                           const SizedBox(
                             height: SkSizes.spaceBtwIteam / 1.5,
                           ),

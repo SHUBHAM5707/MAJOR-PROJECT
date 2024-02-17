@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/rounded_container.dart';
 import 'package:shop_kart/common/widgets/success_screen/success_screen.dart';
 import 'package:shop_kart/features/shop/screens/cart/widgets/cart_item.dart';

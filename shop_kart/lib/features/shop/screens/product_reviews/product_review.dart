@@ -4,7 +4,8 @@ import 'package:shop_kart/features/shop/screens/product_reviews/widgets/rating_p
 import 'package:shop_kart/features/shop/screens/product_reviews/widgets/user_review_card.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
 
-import '../../../../common/widgets/rating/rating_indicator.dart';
+import '../../../../common/widgets/product/rating/rating_indicator.dart';
+
 
 class ProductReviewScreen extends StatelessWidget {
   const ProductReviewScreen({super.key});

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 import 'package:shop_kart/common/widgets/custom_shape/containers/rounded_container.dart';
-import 'package:shop_kart/common/widgets/rating/rating_indicator.dart';
 import 'package:shop_kart/utils/constants/colors.dart';
 import 'package:shop_kart/utils/constants/image_string.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
 import 'package:shop_kart/utils/helpers/helper_function.dart';
+
+import '../../../../../common/widgets/product/rating/rating_indicator.dart';
 
 class UserReviewCard extends StatelessWidget {
   const UserReviewCard({super.key});
