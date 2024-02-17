@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:shop_kart/common/widgets/appbar/appbar.dart';
 import 'package:shop_kart/common/widgets/brand/brand_card.dart';
 import 'package:shop_kart/common/widgets/layouts/grid_layout.dart';
-import 'package:shop_kart/common/widgets/product/sortable/sortable_products.dart';
 import 'package:shop_kart/common/widgets/texts/section_heading.dart';
 import 'package:shop_kart/features/shop/screens/brand/brand_product.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
