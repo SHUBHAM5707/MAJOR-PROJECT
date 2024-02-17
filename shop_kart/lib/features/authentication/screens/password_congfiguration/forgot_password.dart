@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shop_kart/features/authentication/screens/password_congfiguration/reset_passwod.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';

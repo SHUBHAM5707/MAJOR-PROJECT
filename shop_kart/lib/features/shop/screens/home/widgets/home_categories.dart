@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shop_kart/features/shop/screens/sub_categories/sub_categories.dart';
 
 import '../../../../../common/widgets/images_text/vertical_image_text.dart';
 import '../../../../../utils/constants/image_string.dart';
@@ -21,7 +23,7 @@ class SkHomeCategories extends StatelessWidget {
           return SkVerticalImageText(
               image: SkImages.sportsIcon,
               title: 'Shoes',
-              onTap: () {});
+              onTap: () => Get.to(() => const SubCategoriesScreen()));
         },
       ),
     );

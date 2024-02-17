@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:shop_kart/utils/constants/colors.dart';
-import 'package:shop_kart/utils/constants/sizes.dart';
 import 'package:shop_kart/utils/devices/device_utility.dart';
 import 'package:shop_kart/utils/helpers/helper_function.dart';
 

@@ -1,11 +1,10 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 
 class SkProductPriceText extends StatelessWidget {
   const SkProductPriceText({
     super.key,
-    this.currencySign = '\₹',
+    this.currencySign = '₹',
     required this.price,
     this.maxLine = 1,
     this.isLarge = false,
@@ -24,10 +23,8 @@ class SkProductPriceText extends StatelessWidget {
       maxLines: maxLine,
       overflow: TextOverflow.ellipsis,
       style: isLarge
-          ? Theme.of(context).textTheme.headlineMedium!.apply(
-              decoration: lineThrough ? TextDecoration.lineThrough : null)
-          : Theme.of(context).textTheme.titleLarge!.apply(
-              decoration: lineThrough ? TextDecoration.lineThrough : null),
+          ? Theme.of(context).textTheme.headlineMedium!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null)
+          : Theme.of(context).textTheme.titleLarge!.apply(decoration: lineThrough ? TextDecoration.lineThrough : null),
     );
   }
 }

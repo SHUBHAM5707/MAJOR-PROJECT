@@ -6,7 +6,6 @@ import 'package:shop_kart/utils/constants/colors.dart';
 
 import '../../../../../common/widgets/custom_shape/containers/circular_container.dart';
 import '../../../../../common/widgets/images/rounded_images.dart';
-import '../../../../../utils/constants/image_string.dart';
 import '../../../../../utils/constants/sizes.dart';
 
 class SkPromoSlider extends StatelessWidget {
