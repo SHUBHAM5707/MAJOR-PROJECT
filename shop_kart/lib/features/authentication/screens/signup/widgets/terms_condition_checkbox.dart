@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:shop_kart/features/authentication/controller/signup/signup_controller.dart';
 
 import '../../../../../utils/constants/colors.dart';
