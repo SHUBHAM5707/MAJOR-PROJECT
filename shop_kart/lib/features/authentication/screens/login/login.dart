@@ -9,14 +9,12 @@ import 'package:shop_kart/features/authentication/screens/login/widgets/login_he
 
 import 'package:shop_kart/utils/constants/sizes.dart';
 import 'package:shop_kart/utils/constants/text_string.dart';
-import 'package:shop_kart/utils/helpers/helper_function.dart';
 
 class  LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = SKHelperFunction.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shop_kart/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:shop_kart/utils/constants/colors.dart';
 import 'package:shop_kart/utils/theme/theme.dart';
+import 'package:shop_kart/binding/general_binding.dart';
 
 
 class App  extends StatelessWidget {
@@ -13,7 +14,8 @@ class App  extends StatelessWidget {
         themeMode: ThemeMode.system,
         theme: SkAppTheme.lightTheme,
         darkTheme: SkAppTheme.darkTheme,
-        home: const OnBoardingScreen(),
+        initialBinding: GeneralBinding(),
+        home: const Scaffold(backgroundColor: SkColors.primary,body: Center(child: CircularProgressIndicator(color: Colors.white)),),
     );
   }
 }

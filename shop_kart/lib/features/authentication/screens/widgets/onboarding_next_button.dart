@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:shop_kart/features/authentication/controlles.onboarding/onboarding_controller.dart';
 
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/devices/device_utility.dart';
 import '../../../../utils/helpers/helper_function.dart';
+import '../../controller/onboarding/onboarding_controller.dart';
 
 class OnboardingNextButton extends StatelessWidget {
   const OnboardingNextButton({

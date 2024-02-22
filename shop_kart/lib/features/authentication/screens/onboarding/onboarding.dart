@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shop_kart/features/authentication/controlles.onboarding/onboarding_controller.dart';
 import 'package:shop_kart/utils/constants/image_string.dart';
 import 'package:shop_kart/utils/constants/text_string.dart';
 
+import '../../controller/onboarding/onboarding_controller.dart';
 import '../widgets/onboarding_dot_navigation.dart';
 import '../widgets/onboarding_next_button.dart';
 import '../widgets/onboarding_page.dart';

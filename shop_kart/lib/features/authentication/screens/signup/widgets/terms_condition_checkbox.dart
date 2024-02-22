@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shop_kart/features/authentication/controller/signup/signup_controller.dart';
 
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
@@ -13,10 +15,11 @@ class SkTermsAndConditionCheck extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = SignupController.instance;
     final dark = SKHelperFunction.isDarkMode(context);
     return Row(
       children: [
-        SizedBox(width: 24,height: 24, child: Checkbox(value: true,onChanged: (value){})),
+        SizedBox(width: 24,height: 24, child: Obx(() => Checkbox(value: true,onChanged: (value){}))),
         const SizedBox(height: SkSizes.spaceBtwIteam),
         Text.rich(
           TextSpan(children: [

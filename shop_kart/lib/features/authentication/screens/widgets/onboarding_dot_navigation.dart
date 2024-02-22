@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shop_kart/features/authentication/controlles.onboarding/onboarding_controller.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/devices/device_utility.dart';
 import '../../../../utils/helpers/helper_function.dart';
+import '../../controller/onboarding/onboarding_controller.dart';
 
 class OnBoardingDotNavigation extends StatelessWidget {
   const OnBoardingDotNavigation({

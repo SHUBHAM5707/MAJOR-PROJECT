@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shop_kart/features/authentication/controlles.onboarding/onboarding_controller.dart';
 
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/devices/device_utility.dart';
+import '../../controller/onboarding/onboarding_controller.dart';
 
 class OnBoardingSkip extends StatelessWidget {
   const OnBoardingSkip({

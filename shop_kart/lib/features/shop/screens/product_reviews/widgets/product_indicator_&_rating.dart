@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-
+// ignore: file_names
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/devices/device_utility.dart';
+import 'package:flutter/material.dart';
 
 
 class SkRatingProgressIndicator extends StatelessWidget {
