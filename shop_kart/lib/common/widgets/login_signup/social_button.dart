@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shop_kart/features/authentication/controller/login/login_controller.dart';
 
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/image_string.dart';
@@ -9,13 +11,14 @@ class SkSocialButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           decoration: BoxDecoration(border: Border.all(color: SkColors.grey), borderRadius: BorderRadius.circular(100)),
           child: IconButton(
-            onPressed: (){},
+            onPressed: () => controller.googleSignIn(),
             icon: const Image(
               width: SkSizes.iconMd,
               height: SkSizes.iconMd,

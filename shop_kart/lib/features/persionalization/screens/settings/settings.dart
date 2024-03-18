@@ -11,6 +11,7 @@ import 'package:shop_kart/utils/constants/sizes.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
 import '../address/address.dart';
+import '../profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -34,7 +35,7 @@ class SettingsScreen extends StatelessWidget {
                             .apply(color: SkColors.white))),
 
                 ///user profile
-                const UserProfileTile(),
+                UserProfileTile(onPressed: () => Get.to(()=> const ProfileScreen())),
                 const SizedBox(
                   height: SkSizes.spaceBtwSections,
                 ),

@@ -64,4 +64,27 @@ class SkImages{
   //profile
   static const String user = "assets/Icons/user/man.png";
 
+
+  // lottie Animation
+
+  static const String cartAnimation = "assets/animations/market.png";
+  static const String orderCompletedAnimation = "assets/animations/confirmation.png";
+  static const String packageAnimation= "assets/animations/packing.png";
+  static const String paperPlaneAnimation= "assets/animations/paper-plane.png";
+  static const String carAnimation = "assets/animations/car.png";
+  static const String pencilAnimation = "assets/animations/content-creator.png";
+  static const String docerAnimation = "assets/animations/delivery.png";
+  static const String searchAnimation = "assets/animations/question.png";
+  static const String emptyAnimation = "assets/animations/empty-cart.png";
+  static const String securityAnimation = "assets/animations/security.png";
+  static const String successfullRegistrationAnimation = "assets/animations/done.png";
+  static const String thankYouAnimation = "assets/animations/thank-you.png";
+  static const String paymentAnimation = "assets/animations/smart-payment (1).png";
+  static const String loadingAnimation= "assets/animations/hourglass.png";
+  static const String cloudUploadingAnimation = "assets/animations/cloud.png";
+  static const String loaderAnimation = "assets/animations/loader.png";
+
+
+
+
 }

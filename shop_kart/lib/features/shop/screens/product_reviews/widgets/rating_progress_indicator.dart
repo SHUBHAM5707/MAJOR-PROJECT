@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_kart/features/shop/screens/product_reviews/widgets/product_indicator_&_rating.dart';
+import 'package:shop_kart/features/shop/screens/product_reviews/widgets/product_indicator_rating.dart';
 
 class SkOverallProductRating extends StatelessWidget {
   const SkOverallProductRating({

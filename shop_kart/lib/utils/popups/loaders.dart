@@ -41,7 +41,7 @@ class SkLoader {
     );
   }
 
-  static warningSnackBar({required title,message = ''}){
+  static warningSnackBar({required title,message }){
     Get.snackbar(
         title,
         message,

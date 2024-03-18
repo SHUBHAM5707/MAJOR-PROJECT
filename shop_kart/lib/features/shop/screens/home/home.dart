@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shop_kart/features/persionalization/controlles/user_controller.dart';
 import 'package:shop_kart/features/shop/screens/all_product/all_product.dart';
 import 'package:shop_kart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:shop_kart/features/shop/screens/home/widgets/home_categories.dart';
@@ -18,6 +19,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(UserController());
     return  Scaffold(
       body: SingleChildScrollView(
         child: Column(

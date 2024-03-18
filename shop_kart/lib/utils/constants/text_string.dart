@@ -53,6 +53,7 @@ class SkTexts{
   static const String accountCreatedTitle = "Your Account Created Successfully ";
   static const String accountCreatedSubTitle = "Welcome to Your shopping destination, you account has been created ";
 
+
   //--Home
 
   static const String homeAppbarTitle = "Good Day For Shopping";

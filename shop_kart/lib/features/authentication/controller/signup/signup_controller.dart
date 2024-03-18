@@ -9,7 +9,7 @@ class SignupController extends GetxController{
   static SignupController get instance => Get.find();
 
   ///variable
-  final hidePassword = true.obs;
+  final hidePassword = true.obs; //show and hode pass
   final privacyPolicy = true.obs;
   final email = TextEditingController(); //input email
   final lastName = TextEditingController(); //input lastname
@@ -37,6 +37,10 @@ class SignupController extends GetxController{
       if(!signUpFormKey.currentState!.validate()) return;
 
       //privacy policy check
+      if(!privacyPolicy.value){
+        SkLoader.warningSnackBar(title: 'Accept Privacy Policy',message: 'In order to create account you have to accept privacy policy');
+        return;
+      }
 
       //register user in firebase authenticate & saver user data in the firebase
 
