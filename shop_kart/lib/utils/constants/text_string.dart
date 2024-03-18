@@ -25,6 +25,8 @@ class SkTexts{
   static const String rememberMe = "Remember Me";
   static const String forgetPassword = "Forget Password?";
   static const String signIn = "Sign In";
+  static const String save = "Save";
+  static const String verify = "Verify";
   static const String createAccount = "Create Account";
   static const String orSignInWith = "sign in with";
   static const String orSignUpWith = "or sign up with";

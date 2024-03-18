@@ -4,6 +4,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:shop_kart/data/repositories/user/user_repository.dart';
 import 'package:shop_kart/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:shop_kart/features/authentication/screens/signup/verify_email.dart';
 import 'package:shop_kart/navigation_menu.dart';
@@ -134,7 +135,23 @@ class AuthenticationRepository extends GetxController {
 
 
   ///[Re authentication]- re Authentication
+  Future<void> reAuthenticateEmailAndPassword(String email,String password) async{
+    try{
+      AuthCredential credential = EmailAuthProvider.credential(email: email, password: password);
 
+      await _auth.currentUser!.reauthenticateWithCredential(credential);
+    } on FirebaseAuthException catch (e) {
+      throw SkFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw SkFirebaseExceptions(e.code).message;
+    } on FormatException catch (_) {
+      throw const SkFormatException();
+    } on PlatformException catch (e) {
+      throw SkPlatformExceptions(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong.';
+    }
+  }
 
 
 
@@ -191,4 +208,20 @@ class AuthenticationRepository extends GetxController {
   }
 
   ///delete-user
+  Future<void> deleteAccount() async{
+    try{
+      await UserRepository.instance.removeUserRecord(_auth.currentUser!.uid);
+      await _auth.currentUser?.delete();
+    } on FirebaseAuthException catch (e) {
+      throw SkFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw SkFirebaseExceptions(e.code).message;
+    } on FormatException catch (_) {
+      throw const SkFormatException();
+    } on PlatformException catch (e) {
+      throw SkPlatformExceptions(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong.';
+    }
+  }
 }
