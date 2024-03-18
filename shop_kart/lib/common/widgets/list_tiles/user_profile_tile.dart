@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shop_kart/features/persionalization/controlles/user_controller.dart';
 
