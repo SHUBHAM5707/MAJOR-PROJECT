@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart%20';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shop_kart/data/repositories/authentication/authentication_repository.dart';
 import 'package:shop_kart/data/repositories/user/user_repository.dart';
