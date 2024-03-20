@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../features/shop/models/product_model.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../layouts/grid_layout.dart';
 import '../product_cards/product_card_vertical.dart';
@@ -25,7 +26,7 @@ class SkSortableProducts extends StatelessWidget {
         ),
         const SizedBox(height: SkSizes.spaceBtwIteam),
         ///products
-        SkGridLayout(itemCount: 10, itemBuilder: (_,index) => const SkProductCardVertical())
+        SkGridLayout(itemCount: 10, itemBuilder: (_,index) => SkProductCardVertical(product: ProductModel.empty()))
       ],
     );
   }

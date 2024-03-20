@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:shop_kart/data/repositories/authentication/authentication_repository.dart';
 import 'package:shop_kart/features/authentication/models/user_model.dart';
-
 import '../../../utils/exceptions/firebase_exceptions.dart';
 import '../../../utils/exceptions/format_exceptions.dart';
 import '../../../utils/exceptions/platform_exceptions.dart';
@@ -91,4 +94,24 @@ class UserRepository extends GetxController{
     }
   }
 
+
+  ///image picker
+
+  Future<String> uploadImage(String path,XFile image) async{
+    try{
+
+      final ref = FirebaseStorage.instance.ref(path).child(image.name);
+      await ref.putFile(File(image.path));
+      final url = await ref.getDownloadURL();
+      return url;
+    } on FirebaseException catch (e) {
+      throw SkFirebaseExceptions(e.code).message;
+    } on FormatException catch (_) {
+      throw const SkFormatException();
+    } on PlatformException catch (e) {
+      throw SkPlatformExceptions(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong.';
+    }
+  }
 }

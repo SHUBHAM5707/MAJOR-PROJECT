@@ -17,7 +17,6 @@ class SkLoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
-
     return Form(
       key: controller.loginFormKey,
       child: Padding(
@@ -29,46 +28,34 @@ class SkLoginForm extends StatelessWidget {
             TextFormField(
                 controller: controller.email,
                 validator: (value) => SkValidator.validateEmail(value),
-                decoration: const InputDecoration(
-                    prefixIcon: Icon(Iconsax.direct_right),
-                    labelText: SkTexts.email)),
+                decoration: const InputDecoration(prefixIcon: Icon(Iconsax.direct_right), labelText: SkTexts.email)),
             const SizedBox(height: SkSizes.spaceBtwInputFields),
 
             ///password
             TextFormField(
               controller: controller.password,
-              validator: (value) =>
-                  SkValidator.validateEmptyText('password', value),
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.password_check),
-                labelText: SkTexts.password,
-                suffixIcon: Icon(Iconsax.eye_slash),
+              validator: (value) => SkValidator.validateEmptyText('password', value),
+              decoration: const InputDecoration(prefixIcon: Icon(Iconsax.password_check), labelText: SkTexts.password, suffixIcon: Icon(Iconsax.eye_slash),
               ),
             ),
             const SizedBox(height: SkSizes.spaceBtwInputFields / 2),
 
-
             ///remember pass
             Row(
               children: [
-
                 ///remember me
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Obx(() =>
-                        Checkbox(
-                            value: controller.rememberMe.value,
-                            onChanged: (value) => controller.rememberMe.value = !controller.rememberMe.value),
+                        Checkbox(value: controller.rememberMe.value, onChanged: (value) => controller.rememberMe.value = !controller.rememberMe.value),
                     ),
                     const Text(SkTexts.rememberMe),
                   ],
                 ),
 
                 ///forget pass
-                TextButton(
-                    onPressed: () => Get.to(() => const ForgetPassword()),
-                    child: const Text(SkTexts.forgetPassword)),
+                TextButton(onPressed: () => Get.to(() => const ForgetPassword()), child: const Text(SkTexts.forgetPassword)),
               ],
             ),
             const SizedBox(height: SkSizes.spaceBtwSections),
@@ -77,17 +64,14 @@ class SkLoginForm extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () => controller.emailAndPasswordSignIn(),
-                    child: const Text(SkTexts.signIn))),
+                    onPressed: () => controller.emailAndPasswordSignIn(), child: const Text(SkTexts.signIn))),
             const SizedBox(height: SkSizes.spaceBtwIteam),
 
 
             ///create account
             SizedBox(
                 width: double.infinity,
-                child: OutlinedButton(
-                    onPressed: () => Get.to(() => const SignupScreen()),
-                    child: const Text(SkTexts.createAccount))
+                child: OutlinedButton(onPressed: () => Get.to(() => const SignupScreen()), child: const Text(SkTexts.createAccount))
             ),
           ],
         ),

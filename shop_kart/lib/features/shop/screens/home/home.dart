@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shop_kart/features/persionalization/controlles/user_controller.dart';
+import 'package:shop_kart/common/style/shimmer.dart';
+import 'package:shop_kart/features/shop/controlles/product_controller.dart';
 import 'package:shop_kart/features/shop/screens/all_product/all_product.dart';
 import 'package:shop_kart/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:shop_kart/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:shop_kart/features/shop/screens/home/widgets/promo_slider.dart';
-import 'package:shop_kart/utils/constants/image_string.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
 import '../../../../common/widgets/custom_shape/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shape/containers/search_container.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/product/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
+import '../../models/product_model.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(UserController());
+    final controller = Get.put(ProductController());
     return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -65,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     ///promo slider
-                    const SkPromoSlider(banner: [SkImages.promoBanner1, SkImages.promoBanner2, SkImages.promoBanner3]),
+                    const SkPromoSlider(),
                     const SizedBox(height: SkSizes.spaceBtwSections),
 
                     ///heading
@@ -73,7 +74,25 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(height: SkSizes.spaceBtwSections),
 
                     ///--product
-                    SkGridLayout(itemCount: 2,itemBuilder: (_,index) => const SkProductCardVertical())
+                    Obx(() {
+                      if (controller.isLoading.value) {
+
+
+                        return const SkShimmerEffect(width: 50, height: 50);
+                      }
+
+                      if (controller.featuredProducts.isEmpty) {
+                        return Center(child: Text('No Data Found!', style: Theme
+                            .of(context)
+                            .textTheme
+                            .bodyMedium));
+                      }
+                      return SkGridLayout(
+                        itemCount: controller.featuredProducts.length,
+                        itemBuilder: (_,
+                            index) => SkProductCardVertical(product: ProductModel.empty(),),
+                      );
+                    })
                   ],
                 )
               ),

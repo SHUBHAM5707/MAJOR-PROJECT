@@ -30,7 +30,7 @@ class LoginController extends GetxController{
   ///--email and password Sign-in
   Future<void> emailAndPasswordSignIn() async{
     try{
-      SkFullScreenLoader.openLoadingDialog('loging you in ...', SkImages.docerAnimation);
+      SkFullScreenLoader.openLoadingDialog('logging you in ...', SkImages.docerAnimation);
 
       final isConnected = await NetworkManager.instance.isConnected();
       if(!isConnected) {
@@ -77,7 +77,7 @@ class LoginController extends GetxController{
       //google authentication
       final userCredentials = AuthenticationRepository.instance.signInWithGoogle();
 
-      await userController.saveUserRecord(userCredentials as UserCredential?);
+      await userController.saveUserRecord(UserCredential as UserCredential?);
 
       SkFullScreenLoader.stopLoading();
 

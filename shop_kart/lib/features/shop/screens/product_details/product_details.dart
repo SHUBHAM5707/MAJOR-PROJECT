@@ -12,9 +12,13 @@ import 'package:shop_kart/features/shop/screens/product_reviews/product_review.d
 
 import 'package:shop_kart/utils/constants/sizes.dart';
 
+import '../../models/product_model.dart';
+
 
 class ProductDetail extends StatelessWidget {
-  const ProductDetail({super.key});
+  const ProductDetail({super.key, required this.product});
+
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

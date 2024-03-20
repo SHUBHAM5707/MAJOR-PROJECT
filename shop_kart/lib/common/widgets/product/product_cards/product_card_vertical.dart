@@ -10,22 +10,26 @@ import 'package:shop_kart/common/widgets/texts/brand_title_with_verified_icon.da
 import 'package:shop_kart/common/widgets/texts/product_title_text.dart';
 import 'package:shop_kart/features/shop/screens/product_details/product_details.dart';
 import 'package:shop_kart/utils/constants/colors.dart';
-import 'package:shop_kart/utils/constants/image_string.dart';
 import 'package:shop_kart/utils/constants/sizes.dart';
 import 'package:shop_kart/utils/helpers/helper_function.dart';
 
+import '../../../../features/shop/controlles/product_controller.dart';
+import '../../../../features/shop/models/product_model.dart';
+import '../../../../utils/constants/enums.dart';
 import '../../icons/sk_circular_icon.dart';
-import '../../texts/product_price_text.dart';
 
 
 class SkProductCardVertical extends StatelessWidget {
-  const SkProductCardVertical({super.key});
+  const SkProductCardVertical({super.key, required this.product});
 
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
+    final controller = ProductController.instance;
+    final salePercentage = controller.calculateSalePercentage(product.price, product.salePrice);
     final dark = SKHelperFunction.isDarkMode(context);
     return GestureDetector(
-      onTap: () => Get.to(()=> const ProductDetail()),
+      onTap: () => Get.to(()=> ProductDetail(product: product)),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -44,8 +48,8 @@ class SkProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   ///thumbnail img
-                  const SkRoundedImage(
-                      imageUrl: SkImages.productImage1, applyImageRadius: true),
+                  SkRoundedImage(
+                      imageUrl: product.thumbnail, applyImageRadius: true,isNetworkImage: true,),
       
                   ///sale tag
                   Positioned(
@@ -55,7 +59,7 @@ class SkProductCardVertical extends StatelessWidget {
                       backgroundColor: SkColors.secondary.withOpacity(0.8),
                       padding: const EdgeInsets.symmetric(
                           horizontal: SkSizes.sm, vertical: SkSizes.xs),
-                      child: Text('25%', style: Theme.of(context).textTheme.labelLarge!.apply(color: SkColors.black)),
+                      child: Text('$salePercentage%', style: Theme.of(context).textTheme.labelLarge!.apply(color: SkColors.black)),
                     ),
                   ),
       
@@ -71,15 +75,14 @@ class SkProductCardVertical extends StatelessWidget {
             const SizedBox(height: SkSizes.spaceBtwIteam / 2),
       
             ///details
-            const Padding(
-              padding:  EdgeInsets.only(left: SkSizes.sm),
+            Padding(
+              padding:  const EdgeInsets.only(left: SkSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   SkProductTitleText(
-                      title: 'Nike Air Shoe', smallSize: true),
-                  SizedBox(height: SkSizes.spaceBtwIteam / 2),
-                  SKBrandTitleWithVerifiedIcon(title: 'Nike')
+                   SkProductTitleText(title: product.title, smallSize: true),
+                  const SizedBox(height: SkSizes.spaceBtwIteam / 2),
+                  SKBrandTitleWithVerifiedIcon(title: product.brand!.name)
                 ],
               ),
             ),
@@ -92,9 +95,19 @@ class SkProductCardVertical extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ///price
-                const Padding(
-                  padding: EdgeInsets.only(left: SkSizes.sm),
-                  child: SkProductPriceText(price: '1999'),
+                Flexible(
+                  child: Column(
+                    children: [
+                      if(product.productType == ProductType.single.toString() && product.salePrice > 0)
+                      Padding(
+                        padding: const EdgeInsets.only(left: SkSizes.sm),
+                        child: Text(
+                          product.price.toString(),
+                          style: Theme.of(context).textTheme.labelMedium!.apply(decoration: TextDecoration.lineThrough),
+                        )
+                      ),
+                    ],
+                  ),
                 ),
 
                 ///add to kart button
